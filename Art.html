@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="css/artart.css">
+<!-- <link rel="stylesheet" href="css/artart.scss"> -->
+<title>Commoseum</title>
+<link rel="icon" href="source/commoseum_titlelogo.png">
+<style>
+   @font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* .grid{ margin: 0 auto;}
+.grid-item {object-fit:cover; border-radius: 25px; width:308px;  margin-bottom: 20px; }
+.grid-item--height2 { height: 400px; } */
+</style>
+</head>
+<body  style="font-family:S-CoreDream-3Light;">
+  
+<div class="container-xxl">
+    
+    <div class="row navbar">
+        <!-- Nav tabs -->
+          <ul class="nav justify-content-end nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="hot-tab" data-bs-toggle="tab" data-bs-target="#hot" type="button" role="tab" aria-controls="hot" aria-selected="true">HOT</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="photo-tab" data-bs-toggle="tab" data-bs-target="#photo" type="button" role="tab" aria-controls="photo" aria-selected="false">PHOTO</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="illustration-tab" data-bs-toggle="tab" data-bs-target="#illustration" type="button" role="tab" aria-controls="illustration" aria-selected="false">ILLUSTRATION</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="vector-tab" data-bs-toggle="tab" data-bs-target="#vector" type="button" role="tab" aria-controls="vector" aria-selected="false">VECTOR</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video" type="button" role="tab" aria-controls="video" aria-selected="false">VIDEO</button>
+                </li>
+          </ul>
+    </div>
+    <div class="background-img2-art coverImg">
+        <div class="row align-items-start ">
+            
+            <div class="col-4 logo-position">
+                <a href="Main.html"><img src="source/commoseum_art.png" alt="..."></a>
+            </div>
+            <div class="col-8 nav justify-content-end">
+              <div class="btn-group">
+                    
+                <div id="mySidepanel" class="sidepanel">
+
+                    <a href="Profile.html">My Profile</a>
+                    <a href="Upload.html">Upload</a>
+                    <a href="Art.html">Art</a>
+                    <a href="Music.html">Music</a>
+                    <a href="Search.html">Search</a>
+                    <a href="#">Commercial</a>
+                    <a href="Favorite.html">Favorite</a>
+                </div>
+
+                <button class="openbtn" onclick="openNav()"><i class="fa fa-bars name" aria-hidden="true"></i></button>
+                <button class="closebtn " onclick="closeNav()"><i class="fa fa fa-times name" aria-hidden="true"></i></button>
+                <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+             </div>                               
+            </div>
+            
+        </div>
+    </div>            
+                
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link act" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">JOY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SADNESS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FEAR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ANGER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">DISGUST</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ANTICIPATION</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TRUST</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SURPRISE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">MORE</a>
+              </li>
+            </ul>
+            
+            <div class="nav-item col nav justify-content-end">
+                <div class="dropdown">
+                    <button class="btn text-nowrap dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sorting method
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- contents -->
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="hot" role="tabpanel" aria-labelledby="hot-tab">  
+              <div class="grid row pt-4"  data-masonry='{ "itemSelector": ".grid-item", "isFitWidth": true, "columnWidth": 308,  "gutter": 20}'>
+
+               <!-- img 'width="100%" height="auto"' *line-315 -->
+           <!-- if img height over 400px(?) set class 'grid-item--height2' else default -->
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >  
+            <div class="position-relative">
+              <img class="image-content p-0" src="https://dummyimage.com/600x400/624/fff&text=commoseum"  width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">COMMOSEUM</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+            
+          </div>
+          
+          <!-- img default *line-324-->
+          <div class="grid-item col-sm-6 col-lg-3 p-0 " >
+              <div class="position-relative" style="z-index: 99;">
+                  <div>
+                    <img class="image-content p-0" src="https://dummyimage.com/600x400/634/fff&text=commoseum" style="z-index: 0;" >
+                  </div>
+                  <div class="overlay"  id="contentInfo"></div>
+                  <div class="topleft" id="contentInfo">COMMOSEUM-LARGE</div>
+                  <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+                </div>
+          </div>
+
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >
+            <div class="position-relative">
+              <img class="image-content p-0" src="https://dummyimage.com/600x400/345/fff&text=commoseum"  width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">COMMOSEUM-BLUE</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+          </div>
+
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >
+            <div class="position-relative grid-item--height2">
+              <img class="image-content p-0" src="..." alt="image-cap" width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">RANDOM</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+          </div>
+
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >
+            <div class="position-relative grid-item--height2">
+              <img class="image-content p-0" src="..." alt="image-cap" width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">RANDOM2</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+          </div>
+              
+            </div>
+        </div>
+        <div class="tab-pane" id="photo" role="tabpanel" aria-labelledby="photo-tab">
+            photo
+        </div>
+        <div class="tab-pane" id="illustration" role="tabpanel" aria-labelledby="illustration-tab">
+            illustration
+        </div>
+        <div class="tab-pane" id="vector" role="tabpanel" aria-labelledby="vector-tab">
+            vector
+        </div>
+        <div class="tab-pane" id="video" role="tabpanel" aria-labelledby="video-tab">
+            video
+        </div>
+    </div>
+
+    <!-- paginator -->
+    <div class="mx-auto">
+         
+        <button class="paginate left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+        <span class="counter"></span>
+        <button class="paginate right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+
+    </div>
+    
+
+</div>
+<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
+    <div class="container">
+      <ul class="bd-footer-links ps-0 mb-3">
+        <li class="d-inline-block"><a href="https://github.com/twbs">GitHub</a></li>
+        <li class="d-inline-block ms-3"><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+        <li class="d-inline-block ms-3"><a href="/docs/5.0/examples/">Examples</a></li>
+        <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">About</a></li>
+      </ul>
+      <p class="mb-0">Designed and built with all the love in the world by the <a href="/docs/5.0/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+      <p class="mb-0">Currently v5.0.0-beta2. Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+<script src="js/artart.js"></script>
+<script>
+     
+     var currColor;
+    //  $('.position-relative').css("background-color", "rgba(0,0,0)");
+     $('.grid-item').each(function(i) {
+        var colorCode  = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+     $('.grid-item:nth-child('+(i+1)+')').css("background-color", colorCode);
+
+
+      }).hover(function() {
+
+        // $( this).children($('.overlay')).css("opacity", 1);
+        $(this).children().children('#contentInfo').show();
+      }, function() {
+        // $( this).children($('.overlay')).css("opacity", 0);
+        $(this).children().children('#contentInfo').hide();
+      });
+</script>
+</body>
+</html>

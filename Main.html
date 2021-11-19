@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="css/artart.css">
+<title>Commoseum</title>
+<link rel="icon" href="source/commoseum_titlelogo.png">
+<style>
+   @font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+</style>
+</head>
+<body  style="font-family:S-CoreDream-3Light;">
+  
+<div class="container-xxl">
+    
+    <div class="row navbar">
+        <!-- Nav tabs -->
+        <ul class="nav justify-content-end nav-tabs" id="myTab" role="tablist" >
+            <li class="nav-item">
+              
+                <button class="nav-link active " id="main-tab"  data-bs-toggle="tab" type="button" role="tab" >COMMOSEUM</button>
+            </li>
+            <li class="nav-item">
+
+                <button class="nav-link" onclick="location.href= 'Art.html' " data-bs-toggle="tab" type="button" role="tab" >ART</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" onclick="location.href= 'Music.html' " data-bs-toggle="tab" type="button" role="tab" >MUSIC</button>
+            </li>
+           
+      </ul>
+    </div>
+
+    <div class="background-img-main coverImg">
+       <!-- logo/sign -->
+       <div class="align-items-start d-flex bd-highlight">
+               
+          <div class="p-0 flex-grow-1 bd-highlight logo-position">
+              <img src="source/commoseum_titlelogo_w.png" alt="...">
+
+          </div>
+          <div class="d-grid d-md-block p-3 d-flex flex-nowrap">
+              <button type="button" class="btn btn-sm btn-outline-light m-0 border border-2 fs-6" style="padding: 1px 15px 5px 15px;" data-bs-toggle="modal" data-bs-target="#signIn" data-bs-whatever="@mdo">sign in</button>
+              <button type="button" class="btn btn-sm btn-outline-light border border-2 fs-6" style="padding: 1px 15px 5px 15px;"data-bs-toggle="modal" data-bs-target="#signUp" data-bs-whatever="@mdo">sign up</button>
+
+          </div>
+          
+
+      </div>
+      <div class="pt-5" style=" height:60x; ">
+
+        
+        <!-- search-collapse -->
+        <div id="searchCollapse">
+          <div class="d-flex align-items-center justify-content-center">
+            <div style="width:56px;">
+              &nbsp;
+            </div>
+            <form class="w-50  border border-0 " style="position: relative" >
+              <input type="search" class="form-control" style="background-color: rgba(180, 180, 180, 0.336); color:white;" name="search" placeholder="Search...">
+              <i class="fa fa-search fs-5" style="color:white;  position:absolute; right:16px; top:8px;" ></i>
+            </form>
+      
+            <div class="flex-shrink-0 dropdown ms-3">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+
+
+
+            
+         <div class="d-flex align-items-center justify-content-center flex-column text-center text-white " style="margin-top: 2%;">
+
+                
+              
+                <div class="d-flex flex-column justify-content-center align-items-end fs-5  ">
+
+                              
+                                              <!-- nav -->
+                              <div class="d-flex">
+                                <div class="forIconMargin ps-4 " style="border-radius: 45px 0px 0px 45px;">
+                                  <a href="#commercial"  data-bs-toggle="modal" data-bs-target=""><i class="fa fa-shopping-cart pe-1" aria-hidden="true"></i><span style="font-size: 14px;">COMMERCIAL</span></a>
+                                </div>
+                                <div class="forIconMargin">
+                                  <a href="Favorite.html"><i class="fa fa-heart pe-1" aria-hidden="true"></i><span style="font-size: 14px;">FAVORITE</span></a>
+                                </div>
+                                <div class="forIconMargin">
+                                  <a href="Search.html" role="button" aria-expanded="false" aria-controls="searchCollapse"><i class="fa fa-search pe-1" aria-hidden="true"></i><span style="font-size: 14px;">SEARCH</span></a>
+                                </div>
+                                <div class="forIconMargin">
+                                  <a href="Upload.html"><i class="fa fa-plus-circle pe-1" aria-hidden="true"></i><span style="font-size: 14px;">UPLOAD</span></a>
+                                </div>
+                                <div class="forIconMargin pe-4"  style="border-radius: 0px 45px 45px 0px;">
+                                  <a href="Profile.html"><i class="fa fa-user-circle-o pe-1" aria-hidden="true"></i><span style="font-size: 14px;">MY PROFILE</span></a>
+                                </div>
+                              </div>
+                    
+                </div>
+
+        </div>
+          <!-- commercial-Modal -->
+          <div class="modal fade" id="commercial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">NOTICE!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <strong>Commercial service</strong> is not ready yet.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+           <!-- sign-in modal -->
+         <div class="modal fade" id="signIn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content p-4">
+                  <div id="form-title">
+                    <h1>Sign In</h1>
+                    <h6>Welcome to commoseum!</h6>
+                    
+                </div>
+                <br>
+                <div class="form-box">
+                    
+                    <div>
+                        <input type="text" placeholder="Enter email" name="email" required>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                    </div>
+                    
+                </div>
+                
+            
+                <div class="clearfix">
+                  <button type="button" class="cancelbtn"  data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                  <a href="Home/Main.html"><button type="submit" class="signupbtn" >Sign In</button></a>
+                </div>
+                
+                <div class="text-end">Click <span  style="color:blue; cursor: pointer;" data-bs-target="#signUp" data-bs-toggle="modal" data-bs-dismiss="modal"><u>me</u></span> if you wanna join us!</div>
+                <div class="text-end"><a style="color:rgb(36, 36, 51); cursor: pointer;" href="Find.html" >Forgot your ID or password?</a></div>
+             
+            </div>
+          </div>
+        </div>
+          <!-- sign-up modal -->
+        <div class="modal fade" id="signUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content p-4">
+                <div id="form-title" class="fst-normal">
+                  <h1>Get started free today</h1>
+                  <h6>No credit card required</h6>
+              </div>
+              <br>
+              <div class="form-box">
+                  <div>
+                      <input type="text" placeholder="Name" name="name" required>
+                  </div>
+                  <div>
+                      <input type="text" placeholder="Enter email" name="email" required>
+                  </div>
+                  <div>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+                  </div>
+                  <div>
+                      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                  </div>
+                  <div>
+                      <input type="text" placeholder="Phone Number" name="phone-num" required>
+                  </div>
+              </div>
+              <label class="security">
+                  <input type="checkbox"  id="policy"> <label for='policy'>I agree to Commoseum Terms and Privacy Policy</label>
+                  <br>
+                  <input type="checkbox" id="updates"> <label for="updates">I agree to receive Commoseum news and updates</label>
+              </label>
+              
+          
+              <div id="clearfix">
+              <button type="button" class="cancelbtn"  data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+              <a href="SignUpResult.html"><button type="submit" class="signupbtn">Sign Up</button></a>
+              </div>
+          <!-- </div> -->
+            </div>
+          </div>
+      </div>
+      
+    </div>            
+                
+    
+    <!-- contents -->
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="hot" role="tabpanel" aria-labelledby="hot-tab">  
+              <div class="grid row pt-4"  data-masonry='{ "itemSelector": ".grid-item", "isFitWidth": true, "columnWidth": 308,  "gutter": 20}'>
+
+               <!-- img 'width="100%" height="auto"' *line-315 -->
+           <!-- if img height over 400px(?) set class 'grid-item--height2' else default -->
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >  
+            <div class="position-relative">
+              <img class="image-content p-0" src="img_source/artImg01.jfif"  width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">COMMOSEUM</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+            
+          </div>
+          
+          <!-- img default *line-324-->
+          <div class="grid-item col-sm-6 col-lg-3 p-0 " >
+              <div class="position-relative" style="z-index: 99;">
+                  <div>
+                    <img class="image-content p-0" src="img_source/artImg02.jpg" style="z-index: 0;" >
+                  </div>
+                  <div class="overlay"  id="contentInfo"></div>
+                  <div class="topleft" id="contentInfo">COMMOSEUM-LARGE</div>
+                  <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+                </div>
+          </div>
+
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >
+            <div class="position-relative">
+              <img class="image-content p-0" src="img_source/artImg00.jfif"  width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">COMMOSEUM-BLUE</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+          </div>
+
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >  
+            <div class="position-relative">
+              <img class="image-content p-0" src="img_source/artImg03.gif"  width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">COMMOSEUM</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+            
+          </div>
+          
+          <!-- img default *line-324-->
+          <div class="grid-item col-sm-6 col-lg-3 p-0 " >
+              <div class="position-relative" style="z-index: 99;">
+                  <div>
+                    <img class="image-content p-0" src="img_source/artImg04.jpg" style="z-index: 0;" >
+                  </div>
+                  <div class="overlay"  id="contentInfo"></div>
+                  <div class="topleft" id="contentInfo">COMMOSEUM-LARGE</div>
+                  <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+                </div>
+          </div>
+
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >
+            <div class="position-relative">
+              <img class="image-content p-0" src="img_source/artImg05.jpg"  width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">COMMOSEUM-BLUE</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+          </div>
+
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >  
+            <div class="position-relative">
+              <img class="image-content p-0" src="img_source/artImg06.jpg"  width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">COMMOSEUM</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+            
+          </div>
+          
+          <!-- img default *line-324-->
+          <div class="grid-item col-sm-6 col-lg-3 p-0 " >
+              <div class="position-relative" style="z-index: 99;">
+                  <div>
+                    <img class="image-content p-0" src="img_source/artImg07.jpg" style="z-index: 0;" >
+                  </div>
+                  <div class="overlay"  id="contentInfo"></div>
+                  <div class="topleft" id="contentInfo">COMMOSEUM-LARGE</div>
+                  <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+                </div>
+          </div>
+
+          <div class="grid-item col-sm-6 col-lg-3 p-0" >
+            <div class="position-relative">
+              <img class="image-content p-0" src="img_source/artImg00.jfif"  width="100%" height="auto" >
+              <div class="overlay"  id="contentInfo"></div>
+              <div class="topleft" id="contentInfo">COMMOSEUM-BLUE</div>
+              <div class="bottomright " style="font-size: 12px;" id="contentInfo">VIEW 3.2K <i class="fa fa-heart" aria-hidden="true"></i> 1.2K</div>
+            </div>
+          </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="photo" role="tabpanel" aria-labelledby="photo-tab">
+            photo
+        </div>
+        <div class="tab-pane" id="illustration" role="tabpanel" aria-labelledby="illustration-tab">
+            illustration
+        </div>
+        <div class="tab-pane" id="vector" role="tabpanel" aria-labelledby="vector-tab">
+            vector
+        </div>
+        <div class="tab-pane" id="video" role="tabpanel" aria-labelledby="video-tab">
+            video
+        </div>
+    </div>
+
+    <!-- paginator -->
+    <div class="mx-auto">
+         
+        <button class="paginate left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+        <span class="counter"></span>
+        <button class="paginate right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+
+    </div>
+    
+
+</div>
+<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
+    <div class="container">
+      <ul class="bd-footer-links ps-0 mb-3">
+        <li class="d-inline-block"><a href="https://github.com/twbs">GitHub</a></li>
+        <li class="d-inline-block ms-3"><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+        <li class="d-inline-block ms-3"><a href="/docs/5.0/examples/">Examples</a></li>
+        <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">About</a></li>
+      </ul>
+      <p class="mb-0">Designed and built with all the love in the world by the <a href="/docs/5.0/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+      <p class="mb-0">Currently v5.0.0-beta2. Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+<script src="js/artart.js"></script>
+<script>
+ 
+     var currColor;
+    //  $('.position-relative').css("background-color", "rgba(0,0,0)");
+     $('.grid-item').each(function(i) {
+        var colorCode  = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+     $('.grid-item:nth-child('+(i+1)+')').css("background-color", colorCode);
+
+
+      }).hover(function() {
+
+        // $( this).children($('.overlay')).css("opacity", 1);
+        $(this).children().children('#contentInfo').show();
+      }, function() {
+        // $( this).children($('.overlay')).css("opacity", 0);
+        $(this).children().children('#contentInfo').hide();
+      });
+</script>
+</body>
+</html>

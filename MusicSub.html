@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="css/upload.css">
+<!-- <link rel="stylesheet" href="css/artart.scss"> -->
+<title>Commoseum</title>
+<link rel="icon" href="source/commoseum_titlelogo.png">
+<style>
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+</head>
+<body style="font-family:S-CoreDream-3Light;">
+    <!-- banner -->
+    <div class="container-fluid sticky-top" style="margin-bottom:0px;">
+        <div class="row">
+  
+            <div class="col-1">
+                <a href="Main.html"><img src="source/commoseum_music.png" alt="..."></a>
+            </div>
+    
+            <div class="col-11 nav justify-content-end">
+                    <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="Profile.html">My Profile</a>
+                      <a href="Upload.html">Upload</a>
+                      <a href="Art.html">Art</a>
+                      <a href="Music.html">Music</a>
+                      <a href="Search.html">Search</a>
+                      <a href="#">Commercial</a>
+                      <a href="Favorite.html">Favorite</a>
+                    </div>
+                    
+                    <button class="openbtn" onclick="openNav()"><i class="fa fa-bars name" aria-hidden="true"></i></button>    
+            </div> 
+        </div>
+    </div>
+    <!-- content -->
+    <div class="container ">
+        <div class="row createContent" style="background-color: rgb(243, 242, 242);">
+            <!-- creation -->
+            <div class="col-4 d-flex bd-highlight p-0 createContent" >
+              
+                    <div class="flex-shrink-1 bd-highlight" style="background-color: rgb(34, 34, 34);"> 
+                        <img src="source/art_image.png" class="img-content" alt="concert" >
+                    </div>
+               
+            </div>
+            <div class="col-4 bd-highlight p-0 createContent d-flex flex-column"  style="background-color: rgb(89, 91, 100);">
+              
+                <!-- <div class="flex-shrink-1 bd-highlight">  -->
+                    <p class="fs-6 p-3 m-1 text-white-50">LYRICS</p>
+                    <p class="text-center text-white-50">Center aligned text on all viewport sizes.</p>
+                    <p class="text-center text-white-50">Center aligned text</p>
+
+                    <p class="text-center text-light">Center aligned text on all </p>
+
+                    <p class="text-center text-white-50">Center aligned text on all viewport .</p>
+                    <p class="text-center text-white-50">Center aligned text on </p>
+                    <!-- <p class="text-center text-light">Center aligned text on all</p> -->
+                <!-- </div> -->
+                <!-- audio -->
+                <p class="fs-6 p-3 pb-0 m-1 text-white-50 pt-0">AUDIO</p>
+                    <div class="p-2 m-2 rounded-3 bg-dark text-white" >
+                        <div class="d-flex flex-nowrap">
+                            <!-- playbtn -->
+                            <button onclick="audio.play()" class="me-2 btn btn-dark ado "><i class="fa fa-play" aria-hidden="true"></i></button>
+                            <button onclick="audio.pause()" class="me-2 btn btn-dark ado d-none" ><i class="fa fa-pause" aria-hidden="true"></i></button>
+                            <!-- audio-timeline -->
+                            <!-- <input type="number" onchange="audio.currentTime=this.value"> -->
+                            <div class="row w-100">
+                                <div class="d-flex justify-content-between p-0">
+                                    <span id="curraudio">0:00</span>
+                                    <span id='audioProgress' class="pe-3">0:00</span>
+                                </div>
+                                <input type="range" onchange="audio.currentTime=this.value" id="caudio" name="vol" min="0" max='100' value="0" step="1" >
+
+                            </div>
+                        </div>
+                        <!-- <input type="number" onchange="audio.volume=this.value"> -->
+                        <!-- volume -->
+                        <label for="vol" class="ps-3"><i class="fa fa-volume-down" aria-hidden="true"></i></label>
+                        <input class="w-50" type="range" onchange="audio.volume=this.value" id="vol" name="vol" min="0" max="1" value="0.2" step="0.025" >
+                        <!-- oninput="document.getElementById('volume').innerHTML=Math.floor(this.value*100)+'%';" -->
+                        <!-- <span id='volume'>0</span> -->
+                        <!-- <input type="range" name="points" min="0" max="100" step="5" value="0" oninput="document.getElementById('value2').innerHTML=this.value+'%';"> -->
+
+                    </div>
+           
+        </div>
+            <!-- creation-page-info & emotion -->
+            <div class="col-4 p-1 row" >
+                <div class="col-12 d-flex flex-column bd-highlight mb-3">
+                    <div class="p-2 bd-highlight">
+                        <p class="fs-6 p-0 m-1 text-muted">LIKE <span>3.2M</span></p>
+                        <p class="fs-6 p-0 m-1 text-muted">VIEW <span>1.2M</span></p>
+                    </div>
+                </div>
+
+                <div class="col-12 p-3 pb-0">
+                    <div class="d-flex bd-highlight mb-1 flex-wrap">
+                        <div class="me-auto p-2 bd-highlight fw-bold fs-4 text-uppercase">
+                            Ranked Emotion
+                        </div>
+                        <div class="p-0 pt-4 bd-highlight text-secondary flex-shrink-0" style="font-size: 14px;">
+                            <span data-bs-toggle="modal" data-bs-target="#see-all" style="cursor: pointer;">See All</span>
+                            <!-- Modal -->
+                            <div class="modal fade" id="see-all" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">EMOTION RANKING</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Emotion</th>
+                                                <th scope="col">Ratio</th>
+                                                
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Joy</td>
+                                                    <td>53%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Anger</td>
+                                                    <td>12%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Fear</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Sadness</td>
+                                                    <td>7%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>Disgust</td>
+                                                    <td>5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">6</th>
+                                                    <td>Anticipation</td>
+                                                    <td>5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">7</th>
+                                                    <td>Trust</td>
+                                                    <td>5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">8</th>
+                                                    <td>Surprise</td>
+                                                    <td>5%</td>
+                                                </tr>
+
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <table class="table text-center mb-0">
+                        
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Joy</td>
+                            <td>53%</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Anger</td>
+                            <td>12%</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td>Fear</td>
+                            <td>5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                   
+                </div>
+                <!-- <div class="col-12 float-end">Float end on all viewport sizes</div> -->
+                <div class="d-flex justify-content-center p-2 pt-0">
+                    <!-- <button type="button" class="btn btn-success text-uppercase p-2 pt-0 pb-0">click me to vote!</button> -->
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success text-uppercase p-2 pt-0 pb-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        click me to vote!
+                    </button>
+                    
+                    <!-- Vertically centered scrollable modal -->
+                    <!-- <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        ...
+                    </div> -->
+                    <!-- Modal -->
+                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">VOTE TO YOUR EMOTION</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Emotion</th>
+                                        <th scope="col">Check</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Joy</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="joy" value="" aria-label="...">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Anger</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="anger" value="" aria-label="...">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Fear</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="fear" value="" aria-label="...">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Sadness</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="sadness" value="" aria-label="...">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Disgust</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="disgust" value="" aria-label="...">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>Anticipation</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="anticipation" value="" aria-label="...">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td>Trust</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="trust" value="" aria-label="...">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td>Surprise</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="surprise" value="" aria-label="...">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">MORE</th>
+                                            <td colspan="2">
+                                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+
+                                            </td>
+                                            
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">VOTE!</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="d-flex bd-highlight mb-3">
+                    <div class="me-auto p-2 bd-highlight"></div>
+
+                    <div class="p-2 bd-highlight">
+                        <button type="button" class="btn btn-success text-uppercase">click me to vote!</button>
+                    </div>
+                </div> -->
+            </div>
+           
+        </div>
+        <!-- mini-menu-bar -->
+        <div class="row">
+            <div class="d-flex bd-highlight mb-2 border-bottom" style="background-color: rgb(253, 253, 253);">
+                <div class="me-auto p-2 bd-highlight fw-light">2021.03.21</div>
+                <div class="p-2 bd-highlight"><i class="fa fa-thumbs-o-up evalu thumbs" aria-hidden="true"></i></div>
+                <div class="p-2 bd-highlight" ><i class="fa fa-thumbs-up evalu thumbs" aria-hidden="true" ></i></div>
+                <div class="p-2 bd-highlight"data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="fa fa-paper-plane evalu" aria-hidden="true"></i></div>
+            </div>
+            <!-- message-modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Send message</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Message:</label>
+                          <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!-- every-comment & recommand -->
+        <div class="row">
+            <!-- every-comment -->
+            <div class="col-9">
+                <div class="row">
+                    <!-- maker's profile -->
+                    <div class="col-2 border-end">
+                        <figure class="figure w-100 mt-2 comment" >
+                            <img src="source/music_image2.jpg" class="d-flex justify-content-center figure-img img-fluid rounded-circle maker-profile" alt="...">
+                            <figcaption class="figure-caption text-center">
+                                <p class="mb-1 mt-2">maker.N1</p>
+                                <p>
+                                    <button type="button" class="btn btn-warning btn-sm">Follow+</button>
+                                </p>
+                            </figcaption>
+                        </figure>
+                        
+                    </div>
+
+                    <!-- maker's comment, hashtag -->
+                    <div class="col-10 text-truncate">
+                        <!-- maker's comment -->
+                        <p class="fst-normal fs-5">MAKER's Comment</p>
+                        <div class="w-75 text-truncate ment-1 comment" style="white-space:unset;">Praeterea iter est quasdam res quas ex communi. Praeterea iter est quasdam res quas ex communi.Praeterea iter est quasdam res quas ex communi.Praeterea iter est quasdam res quas ex communi.
+                        </div>
+                        <div class="text-decoration-underline ment" style="cursor: pointer;">See All..</div>
+                        <div class="text-decoration-underline ment d-none" style="cursor: pointer;">Conceal..</div>
+                        <!-- hashtag -->
+                        <a href="#" class="text-decoration-none">#commoseum</a>
+                        <a href="#" class="text-decoration-none">#concert</a>
+                    </div>
+                    
+                </div>
+                <!-- user-comment -->
+                <div>
+                    <!-- tap-btn -->
+                    <ul class="nav nav-pills mb-3 justify-content-end " id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-just-m-tab" data-bs-toggle="pill" data-bs-target="#pills-just-m" type="button" role="tab" aria-controls="pills-just-m" aria-selected="true" style="width:fit-content;">JUST COMMENT</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-time-tab" data-bs-toggle="pill" data-bs-target="#pills-time" type="button" role="tab" aria-controls="pills-time" aria-selected="false" style="width:fit-content;">TIME-LINE COMMENT</button>
+                        </li>
+                    </ul>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Give Your Comment!" aria-label="Give Your Comment!" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+                      </div>
+                    <!-- comment-tap-contents -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- just comment -->
+                        <div class="tab-pane fade show active" id="pills-just-m" role="tabpanel" aria-labelledby="pills-just-tab">
+                            <!-- comment-start -->
+                            <div class="d-flex position-relative">
+                                <img src="source/oil-painting-5268555_1280.jpg" class="flex-shrink-0 me-3 maker-profile" alt="...">
+                                <div>
+                                  <h5 class="mt-3">User</h5>
+                                  <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+                                  <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
+                                </div>
+                              </div>
+                        </div>
+                        <!-- time-line comment -->
+                        <div class="tab-pane fade" id="pills-time" role="tabpanel" aria-labelledby="pills-time-tab">
+                            <!-- comment-start -->
+                            <div class="d-flex position-relative">
+                                <img src="source/concert.jpg" class="flex-shrink-0 me-3 maker-profile" alt="...">
+                                <div>
+                                  <h5 class="mt-3">Custom component with stretched link</h5>
+                                  <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+                                  <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
+                                </div>
+                              </div>
+                              <div class="d-flex position-relative">
+                                <img src="source/oil-painting-5268555_1280.jpg" class="flex-shrink-0 me-3 maker-profile" alt="...">
+                                <div>
+                                  <h5 class="mt-3">Custom component with stretched link</h5>
+                                  <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+                                  <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- recommand -->
+            <div class="col-3">
+               <p class="fst-normal fs-5">RELATED ART</p>
+                <a href="individual_page_Art.html" class="link-secondary">
+                    <div class="card" style="width: 18rem;">
+                            <img src="source/home_image.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card with stretched link</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <!-- <a href="#" class="btn btn-primary stretched-link">VIEW MORE</a> -->
+                            </div>
+                    </div>
+                </a>
+
+              <p class="fst-normal fs-5 mt-3">ROOKIE MAKER</p>
+                <a href="Individual_page_music.html" class="link-secondary">
+                    <div class="card" style="width: 18rem;">
+                        <img src="source/home_image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card with stretched link</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <!-- <a href="#" class="btn btn-primary stretched-link">VIEW MORE</a> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- recommended music -->
+        <!-- <div class="row">
+            <h1 class='col-12'> music</h1>
+        </div>
+        <div class="row row-cols-lg-5 g-lg-3">         
+            <div class="col">
+              <div class="p-3 border bg-light" style="height:300px;">Row column</div>
+            </div>
+            <div class="col">
+              <div class="p-3 border bg-light" style="height:300px;">Row column</div>
+            </div>
+            <div class="col">
+              <div class="p-3 border bg-light" style="height:300px;">Row column</div>
+            </div>
+            <div class="col">
+              <div class="p-3 border bg-light" style="height:300px;">Row column</div>
+            </div>
+            <div class="col">
+              <div class="p-3 border bg-light" style="height:300px;">Row column</div>
+            </div>
+        </div>
+
+        <div class="row"> -->
+            <!-- maker's comment & user's comment -->
+            <!-- <div class='col-10'>
+                <i class="far fa-smile"></i> music
+            </div> -->
+            <!-- user profile img / have to remove '<i>'tag -->
+            <!-- <div class="col-2" style="background-color: blue;">
+                <div class="row">
+                    <div class="col">
+                        RECOMMAND
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-lg-1 g-2 g-lg-3">
+                    <div class="col">
+                      <div class="p-3 border bg-light"style="height:200px;">Row column</div>
+                    </div>
+                    <div class="col">
+                      <div class="p-3 border bg-light"style="height:200px;">Row column</div>
+                    </div>
+                    <div class="col">
+                      <div class="p-3 border bg-light"style="height:200px;">Row column</div>
+                    </div>
+                    
+                    
+                  </div>
+            </div>
+
+        </div> -->
+    </div>
+    <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
+        <div class="container">
+          <ul class="bd-footer-links ps-0 mb-3">
+            <li class="d-inline-block"><a href="https://github.com/twbs">GitHub</a></li>
+            <li class="d-inline-block ms-3"><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+            <li class="d-inline-block ms-3"><a href="/docs/5.0/examples/">Examples</a></li>
+            <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">About</a></li>
+          </ul>
+          <p class="mb-0">Designed and built with all the love in the world by the <a href="/docs/5.0/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+          <p class="mb-0">Currently v5.0.0-beta2. Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+    <script src="js/upload.js"></script>
+    <script>
+        $('div.ment').click(function(){
+            console.log($('div.ment-1').hasClass('text-truncate'));
+            $(this).addClass('d-none').siblings().removeClass('d-none');
+            if( $('div.ment-1').hasClass('text-truncate') ){
+                $('div.ment-1').removeClass('text-truncate').css("white-space","pre-line");
+            } else {
+                $('div.ment-1').addClass('text-truncate').css("white-space","unset");
+            }
+           
+            
+        }); 
+    </script>
+  </body>
+</html>

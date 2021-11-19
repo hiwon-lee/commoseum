@@ -1,0 +1,305 @@
+ul.mm a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.mm a:hover{
+  color:rgb(0, 0, 0);
+}
+.bottom-nav-item a{
+  display: block;
+}
+/* .sticky-top { background-color: white; } */
+.background-img-msc{
+    background-image: url(../source/home_img22.jpg); 
+}
+.coverImg {
+  /* position: relative; */
+    /* max-width: 100%; */
+    width:100%;
+  height: 260px;
+  /* height:100%; */
+  object-fit:scale-down;
+    background-size:cover;
+    /* background-repeat: no-repeat; */
+}
+.background-img2-art{
+    background-image: url(../source/home_img19.jpg);
+   
+}
+.background-img-main{
+  background-image: url(../source/home_img26.jpg);
+  /* background-image: url(../source/home_img16.jpg); */
+
+  height:260px;
+  
+}
+.main {
+  background-image:  url(../source/home_img26.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  /* max-width: 1506px; */
+  /* max-height: 828px; */
+  height: auto;
+  background-attachment:fixed;
+  background-size:cover;
+}
+.flex-fill {
+	background-color:#f3f3f3cc;
+  /* border: 1px solid #e7e7e7; */
+
+}
+.bottom-nav-item:hover {
+  background-color: rgb(179, 179, 179);
+  color:rgb(0, 0, 0);
+}
+.bottom-nav-item:active{
+  background-color: rgb(136, 135, 135);
+}
+.forIconMargin {
+  padding:3px 12px 8px 12px;
+  background-color:rgba(121, 121, 121, 0.473);
+}
+.forIconMargin a{
+  text-decoration: none;
+  color: rgb(253, 253, 253);
+  display:block;
+}
+.forIconMargin img {
+  width:24px;
+  height:24px;
+}
+.bi-list {
+    color: white;
+    font-size: 36px;
+}
+.name {
+    color: white;
+    margin:15px;
+    font-size: 30px;
+    font-weight: 550;
+    padding:5px;
+}
+.mainmenu {
+    background-color: rgba(156, 156, 156, 0.404);   
+
+}
+.mainmenu-item {
+    color: rgb(199, 198, 198);
+    width:300px;
+    font-size: 18px;
+    text-align: end;
+}
+.paginate{
+    border:none;
+    outline: none;
+}
+.mx-auto{text-align: center;}
+.mx-auto button {background-color: white;}
+.logo-position img{
+    padding:12px;
+    height:4.5rem;
+}
+.act{
+    background-color: rgb(158, 158, 158);
+    border-radius: 45px;
+    font-weight: bold;
+}
+
+/* menu */
+.sidepanel  {
+    width: 0;
+    z-index: 1;
+    height: fit-content;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 20px 0px;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  .openbtn, .closebtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    height:100px;
+  }
+  
+  .openbtn:hover, .closebtn:hover {
+    background-color:#444;
+  }
+  /* sign */
+  /* sign in 팝업?*/
+
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 2px solid rgb(172, 172, 172);
+box-sizing: border-box;
+}
+.form-box {
+  border: 1px solid rgb(148, 147, 147);
+  border-bottom: none;
+}
+.form-box div {
+  border-bottom: 1px solid rgb(148, 147, 147);
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin:0px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  background-color:rgba(214, 18, 18, 0.856);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.5;
+}
+.cancelbtn:hover {
+  opacity: 1;
+}
+.signupbtn {
+  background-color: #ffffff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid rgb(104, 104, 104);
+  cursor: pointer;
+  width: 100%;
+
+  outline: none;
+  font-weight: 400;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+#clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+.security {
+  float: left; text-align: left; margin-bottom: 10px;
+  font-size: 12px;
+  padding:15px 0px 0px 0px;
+}
+#form-title {
+  text-align: center;
+  padding:10px;
+  width:100%;
+  color:white;
+  background-color: #000000;
+}
+input{
+  border: 1px solid #2f2f2f;
+  border-bottom: none;
+}
+/* contents */
+.grid{ margin: 0 auto;}
+.grid-item {width:308px;  margin-bottom: 20px; overflow:hidden;}
+.img-content{
+  object-fit:cover;
+}
+.grid-item--height2 { height: 400px; }
+.bottom-nav-item { border-radius: 25px; background-color: rgba(196, 196, 196, 0.63);}
+.act{background-color: rgb(134, 134, 134); }
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #00000062;
+}
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  color: white;
+  display: none;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 16px;
+  z-index: 99999;
+  color:white;
+  display: none;
+}
+.bottomright{
+  position: absolute;
+  bottom: 8px;
+  right:16px;
+  font-size:16px;
+ color: white;
+ display: none;
+}
+.position-relative:hover .overlay {
+  opacity: 1;
+
+}

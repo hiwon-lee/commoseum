@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/upload.css">
+<title>Commoseum</title>
+<link rel="icon" href="source/commoseum_titlelogo.png">
+</head>
+
+<!-- banner -->
+
+<div class="container-fluid sticky-top">
+  <div class="row">
+
+    <div class="col-3">
+      <a href="Main.html"><img src="source/commoseum_titlelogo_w.png" alt="..."></a>
+    </div>
+
+    <div class="col-9 nav justify-content-end">
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="Profile.html">My Profile</a>
+            <a href="Upload.html">Upload</a>
+            <a href="Art.html">Art</a>
+            <a href="Music.html">Music</a>
+            <a href="Search.html">Search</a>
+            <a href="#">Commercial</a>
+            <a href="Favorite.html">Favorite</a>
+        </div>
+      
+      <button class="openbtn" onclick="openNav()"><i class="fa fa-bars name" aria-hidden="true"></i></button>  
+     
+    </div>
+     
+
+  </div>
+</div>
+
+
+  <!-- upload-form -->
+    <div class="container" style="width: 700px;">
+
+      <div class="alert alert-primary text-center" role="alert">
+        UPLOAD YOUR CREATION!
+      </div>
+      
+
+        <form class="row g-3 needs-validation justify-content-md-center" novalidate>
+          <div class="boxing"></div>
+          <!-- Category -->
+          <div class="col-12 boxing">
+            <label for="validationCustom01" class="form-label">Select Category
+            </label>
+            <div class='row'>
+              <div class="col-4 d-flex align-items-start" >
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-art-tab" data-bs-toggle="pill" data-bs-target="#pills-art" type="button" role="tab" aria-controls="pills-art" aria-selected="true">Art</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-music-tab" data-bs-toggle="pill" data-bs-target="#pills-music" type="button" role="tab" aria-controls="pills-music" aria-selected="false">Music</button>
+                  </li>
+                </ul>
+              </div>
+              
+                <div class="col-8 tab-content" id="pills-tabContent" >
+                  <div class="tab-pane fade show active" id="pills-art" role="tabpanel" aria-labelledby="pills-art-tab">
+                    <select class="form-select art-category" id="btncheck1" required>
+                      <option selected disabled value="">Art Category</option>
+                      <option>photo</option>
+                      <option>illustraion</option>
+                      <option>vector</option>
+                      <option>video</option>
+                      <option>others</option>
+                    </select>
+                  </div>
+                  <div class="tab-pane fade" id="pills-music" role="tabpanel" aria-labelledby="pills-music-tab">
+                    <select class="form-select art-category" id="btncheck2" required>
+                      <option selected disabled value="">Music Category</option>
+                      <option>pop</option>
+                      <option>hiphop</option>
+                      <option>edm</option>
+                      <option>jazz</option>
+                      <option>others</option>
+                    </select>
+                  </div>
+                  
+                </div>
+              
+              <!-- <div class="invalid-feedback">
+                Please select a valid state.
+              </div> -->
+            </div>
+          </div>
+
+          <!-- upload-file -->
+          <div class="col-12 boxing">
+            <label for="validationCustom02" class="form-label">Upload your creation!</label>
+            <br>
+            <label class="input-group-text" for="inputGroupFile01">
+              
+                  
+                  <div class="input-group">
+                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                  </div>
+            </label> 
+          </div>
+
+          <!-- title -->
+          <div class="col-12 boxing">
+            <label for="validationCustom03" class="form-label">Set title</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" ></textarea>
+          </div>
+
+          <!-- select emotion -->
+          <div class="col-12 boxing">
+            <label for="validationCustom04" class="form-label">Select emotion!</label>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Emotion</th>
+                  <th scope="col">Range</th>
+                  <th scope="col">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>
+                    <select class="form-select art-category" required>
+                      <option selected disabled value="">Select Emotion</option>
+                      <option>Joy</option>
+                      <option>Sadness</option>
+                      <option>Fear</option>
+                      <option>Anger</option>
+                      <option>Disgust</option>
+                      <option>Aniticipation</option>
+                      <option>Surprise</option>
+                      <option>Fear</option>
+                    </select>
+                  </td>
+                  <td >
+                    <input type="range" name="points" min="0" max="100" step="5" value="0" oninput="document.getElementById('value1').innerHTML=this.value+'%';">
+                  </td>
+                  <td>
+                    <span id="value1">0%</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>
+                    <select class="form-select art-category" required>
+                      <option selected disabled value="">Select Emotion</option>
+                      <option>Joy</option>
+                      <option>Sadness</option>
+                      <option>Fear</option>
+                      <option>Anger</option>
+                      <option>Disgust</option>
+                      <option>Aniticipation</option>
+                      <option>Surprise</option>
+                      <option>Fear</option>
+                    </select>
+                  </td>
+                  <td >
+                    <input type="range" name="points" min="0" max="100" step="5" value="0" oninput="document.getElementById('value2').innerHTML=this.value+'%';">
+                  </td>
+                  <td>
+                    <span id="value2">0%</span>
+                  </td>
+                </tr>
+
+               
+              </tbody>
+              
+            </table>
+            
+            <div class="row gx-5">
+              <div class="col d-flex flex-row-reverse">
+               <div class="p-3">
+                <button type="button" class="btn btn-secondary add" style="width:150px;">Add..</button>
+               </div>
+              </div>
+              <div class="col">
+                <div class="p-3 ">
+                  <button type="button" class="btn btn-warning remove" style="width:150px;">Remove..</button>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row gx-3 d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary add" style="width:150px;">Add..</button>
+            </div> -->
+         
+          </div>
+          
+          <!-- Comments -->
+          <!-- TODO : count word -->
+          <div class="col-12 boxing">
+            <label for="validationCustom05" class="form-label">Comments on your creation!</label>
+            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" ></textarea>
+          </div>
+
+          <!-- hashtag -->
+          <div class="col-12 boxing">
+            <label for="validationCustom06" class="form-label">Creating a Hashtag!</label>
+            <textarea class="form-control" id="exampleFormControlTextarea3" rows="3" placeholder="#commoseum"></textarea>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <!-- <div class="invalid-feedback">
+                You must agree before submitting.
+              </div> -->
+            </div>
+          </div>
+          <div class="mx-auto" style="width: fit-content">
+            <button class="btn btn-primary " type="submit">Submit to Upload!</button>
+          </div>
+        </form>
+    </div>
+    <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
+      <div class="container">
+        <ul class="bd-footer-links ps-0 mb-3">
+          <li class="d-inline-block"><a href="https://github.com/twbs">GitHub</a></li>
+          <li class="d-inline-block ms-3"><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+          <li class="d-inline-block ms-3"><a href="/docs/5.0/examples/">Examples</a></li>
+          <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">About</a></li>
+        </ul>
+        <p class="mb-0">Designed and built with all the love in the world by the <a href="/docs/5.0/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+        <p class="mb-0">Currently v5.0.0-beta2. Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+      </div>
+    </footer>
+
+    
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+<script src="js/upload.js"></script>
+</body>
+</html>
